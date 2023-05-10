@@ -3,8 +3,18 @@ import PackageDescription
 
 let package = Package(
     name: "DateToolsSwift",
+    products: [
+        .library(
+            name: "DateToolsSwift",
+            targets: [
+                "DateToolsSwift"
+            ]
+        )
+    ],
     targets: [
-        Target(name: "DateToolsSwift")
+        .target(
+            name: "DateToolsSwift",
+            path: "DateToolsSwift/DateTools"
+        )
     ]
 )
-package.exclude = ["DateTools", "Examples", "Tests", "DateToolsSwift/Examples"]
